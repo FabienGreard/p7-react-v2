@@ -1,16 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const usersCtrl = require('../controllers/users');
-const app = require('../app');
+const usersCtrl = require("../controllers/users");
+const app = require("../app");
 
 // Create user
-router.post('/register', usersCtrl.createUser);
+router.post("/register", usersCtrl.createUser);
 
 // login user
-router.post('/login', usersCtrl.login);
+router.post("/login", usersCtrl.login);
 
 // get profil
-router.get('/:id/profil/', usersCtrl.showProfil);
-router.get('/logout/', usersCtrl.logout);
+router.get("/:id/profil/", usersCtrl.showProfil);
+router.get("/logout/", usersCtrl.logout);
 
 module.exports = router;
